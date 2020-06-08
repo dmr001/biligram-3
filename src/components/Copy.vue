@@ -44,6 +44,7 @@
 
     // import canvgv2  from 'canvg';
     // import Canvg from 'canvg';
+    // import fabric from 'fabric';
 
 
     export default {
@@ -74,39 +75,89 @@
 
             copyChart: function() {
                 this.graphPopup = true;
-                // let v = null;
 
-                    // const canvas = document.querySelector('canvas');
-                    var canvas = document.createElement('canvas');
-                    canvas.width = 1800;
-                    canvas.height = 400;
-                    var ctx = canvas.getContext('2d');
-                    // console.log("Calling querySelector");
-                    var DOMURL = self.URL || self.webkitURL || self;
-                    var img = new Image();
-                    var svgString = new XMLSerializer().serializeToString(document.querySelector('#chart svg'));
+                /// Fabric method
+                // var canvas = document.createElement('canvas');
+                // var svg = document.querySelector('#chart svg');
+                //
+                // fabric.loadSVGFromString(svg.node().parentNode.innerHTML, function (objects, options) {
+                //     var canvasObj = new fabric.Canvas(canvas.id);
+                //     var obj = fabric.util.groupSVGElements(objects, options);
+                //     canvasObj.add(obj).renderAll();
+                //
+                //     // var canvasdata = canvas.toDataURL("image/png");
+                // });
+                // canvas.deactivateAllWithDispatch();
+                // canvas.renderAll();
+                // // var image = canvas.toSVG;
+                // // var svg_image = "data:image/svg+xml," + encodeURIComponent(image);
+
+                // Native method. This works fine in Chrome and Safari, but not IE11, due to IE11 security error when
+                // we try canvas.toDataURL
+                // Alternatives: Fabric, Canvg
+                var canvas = document.createElement('canvas');
 
 
-                    var svg = new Blob([svgString], {
-                       type: "image/svg+xml;charset=utf-8"
-                    });
-                    var url = DOMURL.createObjectURL(svg);
-                    // console.log("Entering onload. URL = " + url + "\nctx = " + ctx + "\nsvgBlob =" + svg);
-                    img.onload = function () {
-                        // console.log("Starting onload");
-                        ctx.drawImage(img, 0, 0);
-                        // console.log("Drew img");
-                        var png = canvas.toDataURL("image/png");
-                        // console.log("In onload, png = " + png);
 
-                        document.querySelector("#png-container").innerHTML = '<img src="' + png + '" width=50%/>';
-                        DOMURL.revokeObjectURL(png);
-                        // var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-                        // window.location.href = image;
-                    }
+                var ctx = canvas.getContext('2d');
+                // console.log("Calling querySelector");
+                var DOMURL = self.URL || self.webkitURL || self;
+                var img = new Image();
+                var svgString = new XMLSerializer().serializeToString(document.querySelector('#chart svg'));
 
-                    img.src = url;
-                    // console.log("Called querySelector");
+
+                var svg = new Blob([svgString], {
+                    type: "image/svg+xml;charset=utf-8"
+                });
+                canvas.width =  900; // svg.width.baseVal.value;
+                canvas.height =  400; // svg.height.baseVal.value;
+
+                var url = DOMURL.createObjectURL(svg);  // This is supposed to work down to IE9
+                // console.log("Entering onload. URL = " + url + "\nctx = " + ctx + "\nsvgBlob =" + svg);
+                img.onload = function () {
+                    // console.log("Starting onload");
+                    ctx.drawImage(img, 0, 0);
+                    // console.log("Drew img");
+                    var png = canvas.toDataURL("image/png");
+                    // console.log("In onload, png = " + png);
+
+                    document.querySelector("#png-container").innerHTML = '<img src="' + png + '" width=50%/>';
+                    DOMURL.revokeObjectURL(png);
+                    // var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                    // window.location.href = image;
+                }
+
+                img.src = url;
+                console.log("Called querySelector");
+
+                    // let canvas = document.createElement('canvas');
+                    // const ctx = canvas.getContext('2d');
+                    // let svg = document.querySelector('#chart svg');
+                    // var svgString = new XMLSerializer().serializeToString(document.querySelector('#chart svg'));
+                    // let width = svg.width.baseVal.value;
+                    // let height = svg.height.baseVal.value;
+                    // canvas.height = height;
+                    // canvas.width = width;
+
+                // canvgv2(canvas, svg.outerHTML, {
+                //     ignoreMouse: true,
+                //     ignoreAnimation: true,
+                // });
+
+
+                    // let v = Canvg.from(ctx, svg, {
+                    //     ignoreMouse: true,
+                    //     ignoreAnimation: true
+                    // });
+                    // let v = null;
+                    // window.onload = async () => {
+                    //     v = await Canvg.fromString(ctx, svgString);
+                    //     console.log('V is ' + v);
+                    //
+                    //     v.start();
+                    // }
+
+
 
                     // var svgml = getSvgml(svg);   // Need for IE, not Chrome/Safari
                     // console.log("Called getSvgml");

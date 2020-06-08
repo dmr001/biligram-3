@@ -4,17 +4,20 @@
             <q-table hide-pagination hide-bottom dense flat :data="resultsSeries" :columns="resultTableColumns" :visible-columns="visibleColumns" :pagination.sync="resultTableState" row-key="drawtime" table-class="result-table">
                 <template v-slot:header="props">
                     <q-tr>
+
                         <q-th>
                             <q-btn key="0"   color="dark" icon='mdi-chevron-down' no-caps size="sm" no-ripple v-if="resultTableShowLatest" @click="toggleTableRows()">Show all</q-btn>
                             <q-btn key="1"   color="accent" icon='mdi-chevron-up' size="sm" v-else @click="toggleTableRows()"></q-btn>
                         </q-th>
+
                         <q-th></q-th>
                         <q-th></q-th>
 
                         <q-th><span style="float: left;">Follow-up recommendations</span>
-
                         </q-th>
+
                         <q-th></q-th>
+
                     </q-tr>
                     <q-tr :props="props">
                         <q-th v-for="col in props.cols" :key="col.name" :props="props">

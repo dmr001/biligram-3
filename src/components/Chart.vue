@@ -1,17 +1,25 @@
 <template>
     <div class="chartElement">
-        <div id="chart" class="row">
-            <highcharts :options="chartOptions" :updateArgs="updateArgs"></highcharts>
+        <div class="row">
+            <div id="chart" class="col-9">
+                <highcharts :options="chartOptions" :updateArgs="updateArgs"></highcharts>
+            </div>
+            <div id="copy" class="col-1">
+                <copy-component>
+                </copy-component>
+            </div>
+            <div class="col-1">
+                <patient-component v-bind:patient="patient"></patient-component>
+            </div>
         </div>
 
-        <div id="copy" class="row">
-            <copy-component>
-            </copy-component>
-        </div>
+
 
         <div id="warnings" class="row">
-            <warnings-component v-bind:warnings="warnings"></warnings-component>
-            <patient-component v-bind:patient="patient"></patient-component>
+            <div class="col-8">
+                <warnings-component v-bind:warnings="warnings"></warnings-component>
+            </div>
+
         </div>
 
         <div id="result-table" class="row">
@@ -301,6 +309,12 @@
 
 
 
+    // this.$q.notify.setDefaults({
+    //     position: 'center',
+    //     timeout: 2500,
+    //     textColor: 'white',
+    //     actions: [{ icon: 'close', color: 'white' }]
+    // })
 
     export default {
         name: "ChartComponent",
@@ -316,7 +330,15 @@
             // warnings: Array
         },
         methods: {
-
+            showNotification(message, level) {
+                this.$q.notify({
+                message: message,
+                html: true,
+                multiLine: true,
+                color: level,
+                position: "center"
+                })
+            }
         },
         data () {
             return {
@@ -703,10 +725,14 @@
             linkButton: {
                 text: "Hyperbilirubinemia article",
                 link: 'https://www.uptodate.com/contents/unconjugated-hyperbilirubinemia-in-the-preterm-infant-less-than-35-weeks-gestation'
-            },
+                },
             dismissable: true,
+            });
 
-        });
+        // showNotification(`The Bhutani risk zones are only valid for birth GA 36+ weeks and birth weight > 2 kg, or 35+ weeks and birth weight > 2.5 kg.
+        //      See the UpToDate article on <a href='https://www.uptodate.com/contents/unconjugated-hyperbilirubinemia-in-the-preterm-infant-less-than-35-weeks-gestation'>
+        //      'Hyperbilirubinemia in the preterm infant' for alternative thresholds.`, 'warning');
+
         // console.log("Warned about birth weight + GA");
 
     } else if (patient.birthGA < 35) {

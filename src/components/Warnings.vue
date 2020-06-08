@@ -38,7 +38,8 @@
                 this.warnings.splice(index, 1)
 
             },
-            openURL
+            openURL,
+
         }
     }
 </script>

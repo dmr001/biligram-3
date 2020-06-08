@@ -1,14 +1,30 @@
 <template>
-    <div class="row text-body2 text-right">
-        <span class="text-weigh-thin>">
-            GA birth
-        </span>
-        <span class="text-weight-bold>">
-            {{ patient.birthGA }}
-        </span>
-        <span class="text-weight-medium>">
-            {{ patient.birthWeight }}
-        </span> kg
+    <div class="column items-left q-pa-md q-gutter-y-sm">
+        <div class="row q-gutter-sm">
+            <q-tooltip self="center right" anchor="center left">Gestational age at birth</q-tooltip>
+
+            <div class="column">
+                <q-icon name="mdi-calendar-today" size=xs></q-icon>
+
+            </div>
+            <div class="column">
+                {{ patient.birthGA }}
+            </div>
+        </div>
+        <div class="row q-gutter-sm">
+            <q-tooltip self="center right" anchor="center left">Birth weight</q-tooltip>
+
+            <div class="column">
+
+                <span class="material-icons" size="md">
+                    airline_seat_flat
+                </span>
+            </div>
+            <div class="column">
+                {{ patient.birthWeight }}kg
+            </div>
+
+        </div>
     </div>
 </template>
 
