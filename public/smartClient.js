@@ -1,6 +1,8 @@
 const getSmartClient = () =>
     new Promise((resolve, reject) => {
         if (process.env.NODE_ENV === 'development') {
+            console.log("In getSmartClient");
+
             /* eslint-disable-next-line */
             const smart = FHIR.client({
 
@@ -14,9 +16,10 @@ const getSmartClient = () =>
                 serviceUrl: 'https://r2.smarthealthit.org',
                 patientId: 'smart-1137192'
             });
-
+            console.log("Got smart: " + smart)
             resolve(smart);
         } else {
+            console.log("In non-development branch of getSmartClient");
             /* eslint-disable-next-line */
             FHIR.oauth2.ready(function(smart, err) {
                 if (err) {
