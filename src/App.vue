@@ -40,6 +40,8 @@
         </div>
 
     </div>
+
+      <conditions :conditions="conditions"></conditions>
     </q-page-container>
 
   </q-layout>
@@ -50,6 +52,8 @@
 import AboutDialog from './components/About.vue';
 import HelpDialog from './components/Help.vue';
 import ChartComponent from './components/Chart';
+import Conditions from './components/Conditions';
+import smartClient from '../public/smartClient';
 
 // import RiskFactorsDialog from "@/components/RiskFactorsDialog";
 // import CurvesC
@@ -58,14 +62,45 @@ export default {
   name: 'App',
   data () {
     return {
-      currentView: 'chart'
-    }
+      currentView: 'chart',
+      patient: null,
+      conditions: null,
+      loading: true,
+      error: null
+    };
   },
   components: {
 
     ChartComponent,
+    Conditions
     // WarningsComponent
   },
+  async mounted() {
+    try {
+      console.log("Starting SMART initialization");
+      const smart = await smartClient();
+      console.log("1");
+
+      this.patient = await smart.patient.read();
+      console.log("2");
+
+      this.conditions = await smart.patient.api.fetchAll( {
+        type: 'Condition'
+      });
+      console.log("3");
+
+      this.loading = false;
+      console.log("Patient: " + this.patient.name);
+      console.log("Birthdate: " + this.patient.birthDate);
+
+    } catch (resp) {
+      this.loading = false;
+      console.log("SMART initialization error: " + resp);
+
+      this.error = resp.error || resp;
+    }
+  },
+
   methods: {
     activate(elem) {
       this.selected = elem
