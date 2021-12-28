@@ -1,0 +1,1641 @@
+{
+    "Patient": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "extension": [
+                {
+                    "extension": [
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/us/core/ValueSet/omb-race-category",
+                                "code": "UNK",
+                                "display": "Unknown"
+                            },
+                            "url": "ombCategory"
+                        },
+                        {
+                            "valueString": "Unknown",
+                            "url": "text"
+                        }
+                    ],
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                },
+                {
+                    "extension": [
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category",
+                                "code": "UNK",
+                                "display": "Unknown"
+                            },
+                            "url": "ombCategory"
+                        },
+                        {
+                            "valueString": "Unknown",
+                            "url": "text"
+                        }
+                    ],
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                },
+                {
+                    "valueCode": "M",
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+                },
+                {
+                    "valueDateTime": "2021-05-10T21:49:55Z",
+                    "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime"
+                }
+            ],
+            "identifier": [
+                {
+                    "extension": [
+                        {
+                            "valueString": "xxx-xx-0000",
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                        }
+                    ],
+                    "use": "usual",
+                    "system": "urn:oid:2.16.840.1.113883.4.1",
+                    "_value": {
+                        "extension": [
+                            {
+                                "valueString": "xxx-xx-0000",
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "use": "usual",
+                    "type": {
+                        "text": "EPI"
+                    },
+                    "system": "urn:oid:1.2.840.114350.1.1",
+                    "value": "E90896"
+                },
+                {
+                    "use": "usual",
+                    "type": {
+                        "text": "EXTERNAL"
+                    },
+                    "value": "Z90849"
+                },
+                {
+                    "use": "usual",
+                    "type": {
+                        "text": "FHIR"
+                    },
+                    "value": "TD1duhN0VgwgsqGhE6tkLZ.Hj2Zn.6E1fDv89.Nuide0B"
+                },
+                {
+                    "use": "usual",
+                    "type": {
+                        "text": "FHIR STU3"
+                    },
+                    "value": "eVGeZDw.fo97QvkAh1l7NSw3"
+                },
+                {
+                    "use": "usual",
+                    "type": {
+                        "text": "INTERNAL"
+                    },
+                    "value": "    Z90849"
+                },
+                {
+                    "use": "usual",
+                    "type": {
+                        "text": "ORCA MRN"
+                    },
+                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.3.737384.300",
+                    "value": "20000110603"
+                }
+            ],
+            "active": true,
+            "name": [
+                {
+                    "use": "official",
+                    "text": "Boy MomJunebilione Test",
+                    "family": "Test",
+                    "given": [
+                        "Boy MomJunebilione"
+                    ]
+                },
+                {
+                    "use": "usual",
+                    "text": "Boy MomJunebilione Test",
+                    "family": "Test",
+                    "given": [
+                        "Boy MomJunebilione"
+                    ]
+                }
+            ],
+            "gender": "male",
+            "birthDate": "2021-05-10",
+            "deceasedBoolean": false,
+            "maritalStatus": {
+                "text": "Single"
+            },
+            "multipleBirthInteger": 1,
+            "managingOrganization": {
+                "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Organization/ekcTFYE5xEJ9tfdjoX2cJaQ3",
+                "display": "Providence Oregon"
+            }
+        }
+    ],
+    "Observation": [
+
+
+
+            {
+                "resourceType": "Observation",
+                "id": "1",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://open.epic.com/FHIR/STU3/StructureDefinition/observation-category",
+                                "code": "core-characteristics",
+                                "display": "Core Characteristics"
+                            }
+                        ],
+                        "text": "Core Characteristics"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "76516-4",
+                            "display": "Gestational age at birth"
+                        }
+                    ],
+                    "text": "Gestational age at birth"
+                },
+                "subject": {
+                    "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                    "display": "Test, Boy MomJunebilione"
+                },
+                "issued": "2021-05-10T21:50:18Z",
+                "performer": [
+                    {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Practitioner/eOBFbLQu5VsI71oFG3TGR.Q3",
+                        "display": "Nurse Inpatient, RN"
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 188,
+                    "unit": "d",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "d"
+                }
+            },
+
+
+
+                {
+                    "resourceType": "Observation",
+                    "id": "2",
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://open.epic.com/FHIR/STU3/StructureDefinition/observation-category",
+                                    "code": "core-characteristics",
+                                    "display": "Core Characteristics"
+                                }
+                            ],
+                            "text": "Core Characteristics"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "8339-4",
+                                "display": "Birth weight measured"
+                            }
+                        ],
+                        "text": "Birth weight measured"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "issued": "2021-05-10T21:50:13Z",
+                    "performer": [
+                        {
+                            "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Practitioner/eOBFbLQu5VsI71oFG3TGR.Q3",
+                            "display": "Nurse Inpatient, RN"
+                        }
+                    ],
+                    "valueQuantity": {
+                        "value": 3.629,
+                        "unit": "kg",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "kg"
+                    }
+                },
+
+
+
+                {
+                    "resourceType": "Observation",
+                    "id": 3,
+                    "patient": 1,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "vital-signs",
+                                    "display": "Vital Signs"
+                                }
+                            ],
+                            "text": "Vital Signs"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.2.707679",
+                                "code": "306664127",
+                                "display": "Source (Phototherapy)"
+                            },
+                            {
+                                "system": "http://open.epic.com/FHIR/STU3/StructureDefinition/observation-flowsheet-id",
+                                "code": "tPobsgZ1RwOFCIWGNeCQDIQ0",
+                                "display": "Source (Phototherapy)"
+                            }
+                        ],
+                        "text": "Source (Phototherapy)"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-15T03:00:00Z",
+                    "issued": "2021-06-08T18:19:48Z",
+                    "performer": [
+                        {
+                            "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Practitioner/exel1r8SlEpuPdfLQmSlztQ3",
+                            "display": "Daniel Rosenberg, MD"
+                        }
+                    ],
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "code": "triple lights;blanket/pad",
+                                "display": "triple lights;blanket/pad"
+                            }
+                        ],
+                        "text": "triple lights;blanket/pad"
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 4,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "vital-signs",
+                                    "display": "Vital Signs"
+                                }
+                            ],
+                            "text": "Vital Signs"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.2.707679",
+                                "code": "306664127",
+                                "display": "Source (Phototherapy)"
+                            },
+                            {
+                                "system": "http://open.epic.com/FHIR/STU3/StructureDefinition/observation-flowsheet-id",
+                                "code": "tPobsgZ1RwOFCIWGNeCQDIQ0",
+                                "display": "Source (Phototherapy)"
+                            }
+                        ],
+                        "text": "Source (Phototherapy)"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-14T18:18:00Z",
+                    "issued": "2021-06-08T18:19:48Z",
+                    "performer": [
+                        {
+                            "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Practitioner/exel1r8SlEpuPdfLQmSlztQ3",
+                            "display": "Daniel Rosenberg, MD"
+                        }
+                    ],
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "code": "overhead;blanket/pad",
+                                "display": "overhead;blanket/pad"
+                            }
+                        ],
+                        "text": "overhead;blanket/pad"
+                    }
+                },
+
+        {
+            "resourceType": "Observation",
+            "id": 14,
+            "status": "final",
+            "category": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/observation-category",
+                            "code": "vital-signs",
+                            "display": "Vital Signs"
+                        }
+                    ],
+                    "text": "Vital Signs"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.297.3.7.2.707679",
+                        "code": "306664127",
+                        "display": "Source (Phototherapy)"
+                    },
+                    {
+                        "system": "http://open.epic.com/FHIR/STU3/StructureDefinition/observation-flowsheet-id",
+                        "code": "tPobsgZ1RwOFCIWGNeCQDIQ0",
+                        "display": "Source (Phototherapy)"
+                    }
+                ],
+                "text": "Source (Phototherapy)"
+            },
+            "subject": {
+                "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                "display": "Test, Boy MomJunebilione"
+            },
+            "context": {
+                "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+            },
+            "effectiveDateTime": "2021-05-14T21:18:00Z",
+            "issued": "2021-06-08T18:19:48Z",
+            "performer": [
+                {
+                    "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Practitioner/exel1r8SlEpuPdfLQmSlztQ3",
+                    "display": "Daniel Rosenberg, MD"
+                }
+            ],
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "overhead;blanket/pad",
+                        "display": "overhead;blanket/pad"
+                    }
+                ],
+                "text": "overhead;blanket/pad"
+            }
+        },
+
+
+
+
+                {
+                    "resourceType": "Observation",
+                    "id": 5,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "Lab",
+                                    "display": "Lab"
+                                }
+                            ],
+                            "text": "Lab"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "242"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "242"
+                            }
+                        ],
+                        "text": "Transcutaneous bilirubin, POC"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-16T02:20:00Z",
+                    "issued": "2021-06-05T14:31:59Z",
+                    "valueQuantity": {
+                        "value": 18.3
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 5,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "POC INT DEV",
+                                    "display": "POC Interfaced Device"
+                                }
+                            ],
+                            "text": "POC Interfaced Device"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "242"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "242"
+                            }
+                        ],
+                        "text": "Transcutaneous bilirubin, POC"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-11T03:43:00Z",
+                    "issued": "2021-05-11T03:43:38Z",
+                    "valueQuantity": {
+                        "value": 8.3
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 6,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "POC INT DEV",
+                                    "display": "POC Interfaced Device"
+                                }
+                            ],
+                            "text": "POC Interfaced Device"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "242"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "242"
+                            }
+                        ],
+                        "text": "Transcutaneous bilirubin, POC"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-11T03:41:00Z",
+                    "issued": "2021-05-11T03:41:54Z",
+                    "valueQuantity": {
+                        "value": 8
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 7,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "POC INT DEV",
+                                    "display": "POC Interfaced Device"
+                                }
+                            ],
+                            "text": "POC Interfaced Device"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "242"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "242"
+                            }
+                        ],
+                        "text": "Transcutaneous bilirubin, POC"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-10T21:54:00Z",
+                    "issued": "2021-05-10T21:54:26Z",
+                    "valueQuantity": {
+                        "value": 9
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 8,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "Lab",
+                                    "display": "Lab"
+                                }
+                            ],
+                            "text": "Lab"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "1975-2"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "5503623"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "4433801"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.772305",
+                                "code": "656030"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.289",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771311",
+                                "code": "40150"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "1534076"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.324",
+                                "code": "BILI TOTAL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771325",
+                                "code": "680408"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.284",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.369",
+                                "code": "82247.SP1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.406",
+                                "code": "BILIT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "NBILT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.439",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.447",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "TBIL1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.449",
+                                "code": "2007"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.500",
+                                "code": "25001700"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.506",
+                                "code": "BILI TOTAL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L400.3200"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L400.3250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "NBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82247.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "82247.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.528",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.532",
+                                "code": "10012"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "1534076"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "NBILT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL2"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL3"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "RTBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.306",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.24",
+                                "code": "86002449"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.102",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.116",
+                                "code": "3134.000"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.1130",
+                                "code": "NTBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.179",
+                                "code": "86002449"
+                            }
+                        ],
+                        "text": "Bilirubin Total"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-14T02:45:00Z",
+                    "issued": "2021-05-29T19:58:06Z",
+                    "valueQuantity": {
+                        "value": 15.5,
+                        "unit": "mg/dL",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mg/dL"
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 9,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "Lab",
+                                    "display": "Lab"
+                                }
+                            ],
+                            "text": "Lab"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "1975-2"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "5503623"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "4433801"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.772305",
+                                "code": "656030"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.289",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771311",
+                                "code": "40150"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "1534076"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.324",
+                                "code": "BILI TOTAL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771325",
+                                "code": "680408"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.284",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.369",
+                                "code": "82247.SP1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.406",
+                                "code": "BILIT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "NBILT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.439",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.447",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "TBIL1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.449",
+                                "code": "2007"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.500",
+                                "code": "25001700"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.506",
+                                "code": "BILI TOTAL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L400.3200"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L400.3250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "NBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82247.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "82247.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.528",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.532",
+                                "code": "10012"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "1534076"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "NBILT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL2"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL3"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "RTBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.306",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.24",
+                                "code": "86002449"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.102",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.116",
+                                "code": "3134.000"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.1130",
+                                "code": "NTBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.179",
+                                "code": "86002449"
+                            }
+                        ],
+                        "text": "Bilirubin Total"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-13T07:45:00Z",
+                    "issued": "2021-05-29T19:57:29Z",
+                    "valueQuantity": {
+                        "value": 14.5,
+                        "unit": "mg/dL",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mg/dL"
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 10,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "Lab",
+                                    "display": "Lab"
+                                }
+                            ],
+                            "text": "Lab"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "1975-2"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "5503623"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "4433801"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.772305",
+                                "code": "656030"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.289",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771311",
+                                "code": "40150"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "1534076"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.324",
+                                "code": "BILI TOTAL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771325",
+                                "code": "680408"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.284",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.369",
+                                "code": "82247.SP1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.406",
+                                "code": "BILIT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "NBILT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.439",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.447",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "TBIL1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.449",
+                                "code": "2007"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.500",
+                                "code": "25001700"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.506",
+                                "code": "BILI TOTAL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L400.3200"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L400.3250"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "NBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "82247.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "82247.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.528",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.532",
+                                "code": "10012"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "1534076"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "NBILT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL2"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "TBIL3"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "RTBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.306",
+                                "code": "82250.Z4"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.24",
+                                "code": "86002449"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.102",
+                                "code": "TBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.116",
+                                "code": "3134.000"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.1130",
+                                "code": "NTBIL"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.179",
+                                "code": "86002449"
+                            }
+                        ],
+                        "text": "Bilirubin Total"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-12T19:34:00Z",
+                    "issued": "2021-05-29T19:57:07Z",
+                    "valueQuantity": {
+                        "value": 12.2,
+                        "unit": "mg/dL",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mg/dL"
+                    }
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 11,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "Lab",
+                                    "display": "Lab"
+                                }
+                            ],
+                            "text": "Lab"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "14979-9"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.26",
+                                "code": "015024"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771305",
+                                "code": "679284"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.289",
+                                "code": "85730.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.77",
+                                "code": "85730.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.771325",
+                                "code": "680527"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "1577206"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.284",
+                                "code": "85730.Z6"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.286",
+                                "code": "85730.Z6"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.357",
+                                "code": "85730.Z6"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.369",
+                                "code": "85730.SP1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.369",
+                                "code": "85730.Z6"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.406",
+                                "code": "PTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.406",
+                                "code": "%O%LUPUS-3%C%"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773321",
+                                "code": "PTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.439",
+                                "code": "PTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.406",
+                                "code": "%O%PAPS-5%C%"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.399",
+                                "code": "APTTBR"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.403",
+                                "code": "85730.Z1"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.506",
+                                "code": "PTT PATIENT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.500",
+                                "code": "30051900"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.503",
+                                "code": "L200.0523"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.528",
+                                "code": "PTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "1577206"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "APTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "HPTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.773402",
+                                "code": "ZPTT"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "1577206"
+                            }
+                        ],
+                        "text": "aPTT"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eY3rQAAm4VfYLkR-2FiurVWgI9AghKxrOjV5fW8Fx.fI3"
+                    },
+                    "effectiveDateTime": "2021-05-13T21:15:00Z",
+                    "issued": "2021-05-13T21:16:40Z",
+                    "valueQuantity": {
+                        "value": 45,
+                        "unit": "seconds"
+                    },
+                    "interpretation": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                                "code": "H",
+                                "display": "High"
+                            }
+                        ],
+                        "text": "High"
+                    },
+                    "comment": "Recommended Heparin Therapeutic Range is 65 - 100 seconds.\r\n",
+                    "referenceRange": [
+                        {
+                            "low": {
+                                "value": 23,
+                                "unit": "seconds"
+                            },
+                            "high": {
+                                "value": 36,
+                                "unit": "seconds"
+                            },
+                            "text": "23 - 36 seconds"
+                        }
+                    ]
+                },
+                {
+                    "resourceType": "Observation",
+                    "id": 12,
+                    "status": "final",
+                    "category": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-category",
+                                    "code": "laboratory",
+                                    "display": "Laboratory"
+                                }
+                            ],
+                            "text": "Laboratory"
+                        },
+                        {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                                    "code": "Lab",
+                                    "display": "Lab"
+                                }
+                            ],
+                            "text": "Lab"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                                "code": "5598880"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                                "code": "1808129"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                                "code": "1808129"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.772305",
+                                "code": "232084881"
+                            }
+                        ],
+                        "text": "Bilirubin, Neonatal, POC"
+                    },
+                    "subject": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                        "display": "Test, Boy MomJunebilione"
+                    },
+                    "context": {
+                        "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+                    },
+                    "effectiveDateTime": "2021-05-14T15:30:00Z",
+                    "issued": "2021-06-05T14:31:37Z",
+                    "valueQuantity": {
+                        "value": 12.9
+                    }
+                },
+
+
+        {
+            "resourceType": "Observation",
+            "id": 13,
+            "status": "final",
+            "category": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/observation-category",
+                            "code": "laboratory",
+                            "display": "Laboratory"
+                        }
+                    ],
+                    "text": "Laboratory"
+                },
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:1.2.840.114350.1.13.297.3.7.10.798268.30",
+                            "code": "Lab",
+                            "display": "Lab"
+                        }
+                    ],
+                    "text": "Lab"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.43",
+                        "code": "5598880"
+                    },
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.539",
+                        "code": "1808129"
+                    },
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.311",
+                        "code": "1808129"
+                    },
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.297.3.7.5.737384.772305",
+                        "code": "232084881"
+                    }
+                ],
+                "text": "Bilirubin, Neonatal, POC"
+            },
+            "subject": {
+                "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Patient/eVGeZDw.fo97QvkAh1l7NSw3",
+                "display": "Test, Boy MomJunebilione"
+            },
+            "context": {
+                "reference": "https://haikuor-staging.providence.org/fhirproxy/api/FHIR/STU3/Encounter/eh2gkpVJ9U.1tJjyv4AGoHfUQDWloJjYr3ywY-4K8lLo3"
+            },
+            "effectiveDateTime": "2021-05-17T12:30:00Z",
+            "issued": "2021-06-05T14:31:37Z",
+            "valueQuantity": {
+                "value": 17.3
+            }
+        }
+
+
+
+
+
+
+        ]
+}
